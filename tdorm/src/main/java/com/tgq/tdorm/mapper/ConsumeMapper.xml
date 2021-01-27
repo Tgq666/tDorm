@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tgq.tdorm.mapper.ConsumeMapper">
+    <resultMap id="ConsumeBaseMap" type="com.tgq.tdorm.entity.Consume">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="pay_name" property="payName" jdbcType="VARCHAR"/>
+        <result column="goods_name" property="goodsName" jdbcType="INTEGER"/>
+        <result column="consume_name" property="consumeName" jdbcType="VARCHAR"/>
+        <result column="goods_price" property="goodsPrice" jdbcType="INTEGER"/>
+        <result column="note" property="note" jdbcType="VARCHAR"/>
+        <result column="settled_name" property="settledName" jdbcType="VARCHAR"/>
+        <result column="dorm_num" property="dormNum" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime"
+                jdbcType="TIMESTAMP" javaType="Date"/>
+        <result column="update_time" property="updateTime"
+                jdbcType="TIMESTAMP" javaType="Date"/>
+        <result column="consume_time" property="consumeTime"
+                jdbcType="TIMESTAMP" javaType="Date"/>
+        <result column="is_deleted" property="isDeleted" jdbcType="INTEGER"/>
+    </resultMap>
+    <select id="getConsumeByDormNum" resultMap="ConsumeBaseMap">
+        SELECT id,pay_name,goods_name,consume_name,goods_price,note,settled_name,consume_time,update_time
+        FROM consume WHERE dorm_num = #{dormNum} and is_deleted = #{isDeleted}
+    </select>
+
+    <insert id="addConsume">
+         INSERT INTO consume (pay_name,goods_name,consume_name,goods_price,note,settled_name,
+        consume_time,update_time,is_deleted,dorm_num)
+        VALUES(#{payName},#{goodsName},#{consumeName},#{goodsPrice},#{note},#{settledName},#{consumeTime},#{updateTime},0,#{dormNum})
+    </insert>
+
+</mapper>

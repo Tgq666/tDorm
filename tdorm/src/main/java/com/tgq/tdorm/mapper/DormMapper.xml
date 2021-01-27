@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tgq.tdorm.mapper.DormMapper">
+    <resultMap id="DormResultMap" type="com.tgq.tdorm.entity.Dormitory">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="dorm_name" property="dormName" jdbcType="VARCHAR"/>
+        <result column="dorm_num" property="dormNum" jdbcType="VARCHAR"/>
+        <result column="dorm_admin" property="dormAdmin" jdbcType="VARCHAR"/>
+        <result column="dorm_desc" property="dormDesc" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime"
+                jdbcType="TIMESTAMP" javaType="Date"/>
+        <result column="update_time" property="updateTime"
+                jdbcType="TIMESTAMP" javaType="Date"/>
+        <result column="is_deleted" property="isDeleted" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <select id="getDormByDormNum" resultMap="DormResultMap">
+        SELECT id,dorm_name,dorm_num,dorm_admin,dorm_desc,create_time,update_time,is_deleted
+        from dormitory
+        where dorm_num = #{dormNum}
+    </select>
+</mapper>

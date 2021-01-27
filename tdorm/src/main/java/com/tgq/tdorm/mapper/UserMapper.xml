@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tgq.tdorm.mapper.UserMapper">
+    <!-- resultMap:存在复杂的返回类型时使用
+    jdbcType:列结果在数据库中所支持的JDBC类型
+    column:从数据库中查询到的结果集的列名或列别名
+    property:java中的列名
+    -->
+    <resultMap id="UserResultMap" type="com.tgq.tdorm.entity.User">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="sex" property="sex" jdbcType="CHAR"/>
+        <result column="school" property="school" jdbcType="VARCHAR"/>
+        <result column="dorm_num" property="dormNum" jdbcType="VARCHAR"/>
+        <result column="phone" property="phone" jdbcType="CHAR"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="question1" property="question1" jdbcType="VARCHAR"/>
+        <result column="answer1" property="answer1" jdbcType="VARCHAR"/>
+        <result column="question2" property="question2" jdbcType="VARCHAR"/>
+        <result column="answer2" property="answer2" jdbcType="VARCHAR"/>
+        <result column="question1" property="question1" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime"
+                jdbcType="TIMESTAMP" javaType="Date"/>
+        <result column="update_time" property="updateTime"
+                jdbcType="TIMESTAMP" javaType="Date"/>
+        <!--  一对一的关系，使用association,
+        property: 关联的对象，javaType：映射的累
+          -->
+        <association property="dormitory"
+                     javaType="com.tgq.tdorm.entity.Dormitory">
+            <id column="id" property="id" jdbcType="INTEGER"/>
+            <result column="dorm_name" property="dormName" jdbcType="VARCHAR"/>
+            <result column="dorm_admin" property="dormAdmin" jdbcType="VARCHAR"/>
+        </association>
+    </resultMap>
+
+    <!--多对多关系，在原UserResultMap上扩展    -->
+    <resultMap id="UserWithRoles" type="com.tgq.tdorm.entity.User" extends="UserResultMap">
+        <collection property="roles" ofType="com.tgq.tdorm.entity.Role">
+            <id column="rid" property="id"/>
+            <result column="role_name" property="roleName"/>
+            <result column="name_desc" property="nameDesc"/>
+        </collection>
+    </resultMap>
+    <!--    查询语句，id接口中方法的名字-->
+    <select id="selectUserByUsername" resultMap="UserResultMap">
+        select * from user where username = #{username}
+    </select>
+
+    <select id="findAllUser" resultType="com.tgq.tdorm.entity.User">
+        select * from user
+    </select>
+    <select id="selectUserRoleByUsername" resultMap="UserWithRoles">
+        select u.id,u.username,u.password,u.name,u.sex,u.dorm_num,u.phone,u.question1,
+        u.answer1,u.question2,u.answer2,u.create_time,u.update_time,
+        r.id as rid,r.role_name,r.name_desc,
+        d.dorm_name,d.dorm_num,d.dorm_admin
+        from user u
+        left join user_role ur on u.id = ur.uid
+        left join role r on ur.rid = r.id
+        left join dormitory d on u.dorm_num = d.dorm_num
+        where username = #{username}
+    </select>
+
+    <insert id="insertUser" >
+        insert into user
+        (username,password,name,sex,dorm_num,question1,answer1,question2,answer2,create_time,update_time)
+        values (#{username},#{password},#{name},#{sex},#{dormNum},#{question1},#{answer1},#{question2},#{answer2},#{createTime},#{updateTime})
+    </insert>
+</mapper>
