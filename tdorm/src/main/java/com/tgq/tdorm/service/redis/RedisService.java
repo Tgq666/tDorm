@@ -5,10 +5,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -67,18 +64,31 @@ public class RedisService {
      * 删除缓存
      * @param key 可以传一个值 或多个
      */
-    public void del(String key) {
-        redisTemplate.delete(key);
+    public boolean del(String key) {
+        try {
+            redisTemplate.delete(key);
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
     }
 
     /**
      * 删除缓存
      * @param keys 可以传一个值 或多个
      */
-    public void del(Collection keys) {
-        if (!CollectionUtils.isEmpty(keys)) {
-            redisTemplate.delete(keys);
+    public boolean del(Collection keys) {
+        try {
+            if (!CollectionUtils.isEmpty(keys)) {
+                redisTemplate.delete(keys);
+            }
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
         }
+
     }
 
     // ============================String=============================
@@ -418,6 +428,21 @@ public class RedisService {
     /**
      * 获取list缓存的内容
      * @param key 键
+     * @return
+     */
+    public List<Object> lGet(String key) {
+        System.out.println("开始查询"+new Date());
+        try {
+            return redisTemplate.opsForList().range(key, 0, -1);
+        } catch (Exception e) {
+            System.out.println("查询失败"+new Date());
+//            e.printStackTrace();
+            return null;
+        }
+    }
+    /**
+     * 获取list缓存的内容
+     * @param key 键
      * @param start 开始
      * @param end 结束 0 到 -1代表所有值
      * @return
@@ -467,11 +492,13 @@ public class RedisService {
      * @return
      */
     public boolean lSet(String key, Object value) {
+        System.out.println("开始设置"+new Date());
         try {
             redisTemplate.opsForList().rightPush(key, value);
             return true;
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("设置失败"+new Date());
+//            e.printStackTrace();
             return false;
         }
     }

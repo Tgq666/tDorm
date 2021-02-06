@@ -4,6 +4,7 @@ import com.tgq.tdorm.entity.Consume;
 import com.tgq.tdorm.entity.User;
 import com.tgq.tdorm.entity.pojo.Bill;
 import com.tgq.tdorm.mapper.ConsumeMapper;
+import com.tgq.tdorm.service.redis.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -21,16 +22,33 @@ public class ConsumeService {
     @Autowired
     ConsumeMapper consumeMapper;
 
+    @Autowired
+    RedisService redisService;
+
     public List<Consume> getSettledConsumeInfo(String dormNum) {
-        return getConsumeInfo(dormNum, true,0);
+        return getConsumeInfoFromRedis(dormNum, true,0);
     }
 
     public List<Consume> getUnSettledConsumeInfo(String dormNum) {
-        return getConsumeInfo(dormNum, false,0);
+        return getConsumeInfoFromRedis(dormNum, false,0);
     }
     public List<Consume> getDeletedConsumeInfo(String dormNum) {
-        return getConsumeInfo(dormNum, false,1);
+        return getConsumeInfoFromRedis(dormNum, false,1);
     }
+
+    private List<Consume> getConsumeInfoFromRedis(String dormNum, boolean settled,Integer isDeleted) {
+        User principal = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String id = String.valueOf(principal.getId());
+        List<Consume> info = (List<Consume>) redisService.lGet(id).get(0);
+        //从redis中查询，如果redis挂了或者在redis中没有数据，则从数据库中查询
+        if(info == null || info.size() == 0){
+            info = getConsumeInfo(dormNum, settled, isDeleted);
+            System.out.println("从数据库中查询");
+            redisService.lSet(id,info);
+        }
+        return info;
+    }
+
     /**
      * 获取消费信息
      * @param dormNum 对应寝室的消费信息
@@ -84,23 +102,47 @@ public class ConsumeService {
         return settled ? settledList : unSettledList;
     }
 
-    public void addConsume(Consume consume) {
-        consume.setUpdateTime(new Date());
-        consumeMapper.addConsume(consume);
+    private boolean delConsumeFromRedis(){
+        User principal = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String id = String.valueOf(principal.getId());
+        return redisService.del(id);
     }
 
-    public void deletedConsume(Integer id){
-        consumeMapper.deleteConsume(id);
+    public boolean addConsume(Consume consume) {
+        if(delConsumeFromRedis()){
+            //先删后写
+            consume.setUpdateTime(new Date());
+            consumeMapper.addConsume(consume);
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public boolean deletedConsume(Integer id){
+        if(delConsumeFromRedis()){
+            //先删后写
+            consumeMapper.deleteConsume(id);
+            return true;
+        }else {
+            return false;
+        }
     }
 
     @Transactional(rollbackFor = Exception.class)
-    public void confirmConsume(List<Bill> bills){
-        for (Bill bill : bills) {
-            Integer id = bill.getId();
-            String name = bill.getSettledName();
-            String settledName = consumeMapper.getSettledConfirm(id);
-            settledName = settledName + "," + name;
-            consumeMapper.updateConfirmConsume(id, settledName);
+    public boolean confirmConsume(List<Bill> bills){
+        if(delConsumeFromRedis()){
+            //先删后写
+            for (Bill bill : bills) {
+                Integer id = bill.getId();
+                String name = bill.getSettledName();
+                String settledName = consumeMapper.getSettledConfirm(id);
+                settledName = settledName + "," + name;
+                consumeMapper.updateConfirmConsume(id, settledName);
+            }
+            return true;
+        }else {
+            return false;
         }
     }
 }
