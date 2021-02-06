@@ -112,10 +112,11 @@
         this.$refs.loginForm.validate(valid =>{
           this.loading = true
           if (valid) {
+            let passwordMd5 = this.$md5(this.loginForm.password);
             axios.post('api/doLogin',
                 this.$qs.stringify({
                   username: this.loginForm.username,
-                  password: this.loginForm.password,
+                  password: passwordMd5,
                   rememberMe: true,
                 }),
                 {

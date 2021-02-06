@@ -12,7 +12,9 @@ import qs from 'qs'
 import '@/icons' // icon
 import '@/permission'
 import { errorHint, normalHint, successHint, successNotification } from '@/utils/Hint'
+import md5 from 'js-md5';
 
+Vue.prototype.$md5 = md5;
 Vue.prototype.errorHint = errorHint;
 Vue.prototype.successHint = successHint;
 Vue.prototype.normalHint = normalHint;

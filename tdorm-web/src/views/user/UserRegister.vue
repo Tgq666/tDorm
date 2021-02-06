@@ -220,9 +220,10 @@
         this.$refs[formName].validate((valid) => {
           if (valid) {
             this.loading = true;
+            let passwordMd5 = this.$md5(this.registerForm.password);
             let params = new URLSearchParams();
             params.append("username",this.registerForm.username);
-            params.append("password",this.registerForm.password);
+            params.append("password",passwordMd5);
             params.append("name",this.registerForm.name);
             params.append("sex",this.registerForm.sex);
             params.append("dormNum",this.registerForm.dormNum);

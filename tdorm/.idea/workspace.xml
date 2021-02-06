@@ -4,7 +4,16 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d46b90d-d10d-4a07-8df6-cc085560c2e9" name="Default Changelist" comment="" />
+    <list default="true" id="7d46b90d-d10d-4a07-8df6-cc085560c2e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/config/redis/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/service/redis/RedisService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tdorm-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tdorm-web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tdorm-web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tdorm-web/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tdorm-web/src/views/login/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../tdorm-web/src/views/login/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tdorm-web/src/views/user/UserRegister.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../tdorm-web/src/views/user/UserRegister.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +27,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -39,6 +51,7 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectId" id="1kpW9q9juUXSuCqL50sOGutRJO0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -55,12 +68,28 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tgq.tdorm.utils" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\code\JavaProject\tdorm\src\main\resources\mapper" />
       <recent name="C:\code\JavaProject\tdorm\src\main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TdormApplication">
+    <configuration name="MD5Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tgq.tdorm.utils.MD5Util" />
+      <module name="tdorm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tgq.tdorm.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Son" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tgq.tdorm.service.user.Son" />
       <module name="tdorm" />
@@ -114,6 +143,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MD5Util" />
         <item itemvalue="Application.Son" />
         <item itemvalue="JUnit.TdormApplicationTests.contextLoads" />
         <item itemvalue="JUnit.TdormApplicationTests" />
@@ -201,6 +231,7 @@
       <workItem from="1611565917425" duration="607000" />
       <workItem from="1611567100128" duration="823000" />
       <workItem from="1611654327274" duration="862000" />
+      <workItem from="1612530945037" duration="5856000" />
     </task>
     <servers />
   </component>
@@ -224,10 +255,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="494" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1608368830278" />
-    <state x="574" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1611124718709">
+    <state x="574" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1612543454554">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="97" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1611124718709" />
+    <state x="574" y="97" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1612543454554" />
     <state x="555" y="241" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1608274793548">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -244,42 +275,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="490" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1611049049701" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1608714910092">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1612530950204">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608714910092" />
-    <state width="1492" height="266" key="GridCell.Tab.0.bottom" timestamp="1611655492928">
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1612530950204" />
+    <state width="1492" height="266" key="GridCell.Tab.0.bottom" timestamp="1612543005790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="266" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611655492928" />
-    <state width="1492" height="266" key="GridCell.Tab.0.center" timestamp="1611655492928">
+    <state width="1492" height="266" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612543005790" />
+    <state width="1492" height="266" key="GridCell.Tab.0.center" timestamp="1612543005789">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="266" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611655492928" />
-    <state width="1492" height="266" key="GridCell.Tab.0.left" timestamp="1611655492928">
+    <state width="1492" height="266" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612543005789" />
+    <state width="1492" height="266" key="GridCell.Tab.0.left" timestamp="1612543005789">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="266" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611655492928" />
-    <state width="1492" height="266" key="GridCell.Tab.0.right" timestamp="1611655492928">
+    <state width="1492" height="266" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612543005789" />
+    <state width="1492" height="266" key="GridCell.Tab.0.right" timestamp="1612543005789">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="266" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611655492928" />
-    <state width="1492" height="266" key="GridCell.Tab.1.bottom" timestamp="1611567912960">
+    <state width="1492" height="266" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612543005789" />
+    <state width="1492" height="266" key="GridCell.Tab.1.bottom" timestamp="1612543005790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="266" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611567912960" />
-    <state width="1492" height="266" key="GridCell.Tab.1.center" timestamp="1611567912960">
+    <state width="1492" height="266" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612543005790" />
+    <state width="1492" height="266" key="GridCell.Tab.1.center" timestamp="1612543005790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="266" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1611567912960" />
-    <state width="1492" height="266" key="GridCell.Tab.1.left" timestamp="1611567912960">
+    <state width="1492" height="266" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1612543005790" />
+    <state width="1492" height="266" key="GridCell.Tab.1.left" timestamp="1612543005790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="266" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1611567912960" />
-    <state width="1492" height="266" key="GridCell.Tab.1.right" timestamp="1611567912960">
+    <state width="1492" height="266" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1612543005790" />
+    <state width="1492" height="266" key="GridCell.Tab.1.right" timestamp="1612543005790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="266" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1611567912960" />
+    <state width="1492" height="266" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1612543005790" />
     <state width="1492" height="266" key="GridCell.Tab.2.bottom" timestamp="1611567912960">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
