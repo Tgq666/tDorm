@@ -96,7 +96,9 @@
         this.$router.replace("/register")
       },
       forget() {
-        this.normalHint("开发中");
+        axios.get('/api/game').catch(reason => {
+          this.errorHint('服务器内部错误')
+        })
       },
       showPwd() {
         if (this.passwordType === 'password') {

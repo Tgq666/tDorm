@@ -14,18 +14,5 @@ import java.util.Set;
 @SpringBootTest
 class TdormApplicationTests {
 
-    @Autowired
-    private DataSource dataSource;
-
-    @Autowired
-    private RedisService redisService;
-
-    @Test
-    void contextLoads() throws SQLException {
-        redisService.set("111", 111);
-        Object o = redisService.get("111");
-        redisService.expire("111",60);
-        System.out.println(o);
-    }
 
 }

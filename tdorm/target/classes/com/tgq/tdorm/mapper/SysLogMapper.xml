@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tgq.tdorm.mapper.SysLogMapper">
+    <!-- resultMap:存在复杂的返回类型时使用
+    jdbcType:列结果在数据库中所支持的JDBC类型
+    column:从数据库中查询到的结果集的列名或列别名
+    property:java中的列名
+    -->
+    <insert id="saveLog">
+        insert into sys_log (username,operation,time,method,params,ip,create_time)
+        values(#{username},#{operation},#{time},#{method},#{params},#{ip},#{createTime})
+    </insert>
+
+</mapper>

@@ -39,15 +39,21 @@
               </el-radio-group>
             </el-form-item>
             <el-form-item label="寝室号码" prop="dormNum">
-              <el-input v-model="registerForm.dormNum" placeholder="请输入寝室号" style="width: 110px"/>
+              <el-input v-model="registerForm.dormNum" placeholder="请输入寝室号" style="width: 120px"/>
               <el-popover
                 v-loading="loading"
                 placement="top"
-                width="160"
+                width="150"
                 v-model="visible">
-                寝室名:
-                <el-input v-model="dormName" autocomplete="off"
-                          style="width:100px;margin-bottom: 10px;margin-left: 10px"/>
+                <div>
+                  <div style="margin-bottom: 5px">
+                    <a style="text-align :left">寝室名:</a>
+                  </div>
+                  <div>
+                    <el-input v-model="dormName" autocomplete="off"
+                              style="width:100px;margin-bottom: 10px;margin-left: 10px"/>
+                  </div>
+                </div>
                 <div style="text-align: right; margin: 0">
                   <el-button size="mini" type="text" @click="visible = false">取消</el-button>
                   <el-button type="primary" size="mini" @click="createDorm"

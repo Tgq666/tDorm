@@ -431,12 +431,10 @@ public class RedisService {
      * @return
      */
     public List<Object> lGet(String key) {
-        System.out.println("开始查询"+new Date());
         try {
-            return redisTemplate.opsForList().range(key, 0, -1);
+            return lGet(key, 0, -1);
         } catch (Exception e) {
-            System.out.println("查询失败"+new Date());
-//            e.printStackTrace();
+            e.printStackTrace();
             return null;
         }
     }
@@ -492,13 +490,11 @@ public class RedisService {
      * @return
      */
     public boolean lSet(String key, Object value) {
-        System.out.println("开始设置"+new Date());
         try {
             redisTemplate.opsForList().rightPush(key, value);
             return true;
         } catch (Exception e) {
-            System.out.println("设置失败"+new Date());
-//            e.printStackTrace();
+            e.printStackTrace();
             return false;
         }
     }

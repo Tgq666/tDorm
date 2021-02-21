@@ -1,5 +1,6 @@
 package com.tgq.tdorm.controller.user;
 
+import com.tgq.tdorm.annotation.Log;
 import com.tgq.tdorm.entity.User;
 import com.tgq.tdorm.service.user.UserModifyService;
 import com.tgq.tdorm.utils.RespUtil;
@@ -17,6 +18,7 @@ public class UserModifyController {
     @Autowired
     UserModifyService userModifyService;
 
+    @Log("创建用户")
     @PostMapping("/register")
     public RespUtil register(User user){
         userModifyService.register(user);

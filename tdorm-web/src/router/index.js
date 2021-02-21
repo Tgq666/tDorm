@@ -102,19 +102,19 @@ export const constantRoutes = [
     ]
   },
 
-  // {
-  //   path: '/contract',
-  //   redirect: '/contract',
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: 'contract',
-  //       name: 'Contract',
-  //       component: () => import('@/views/contract/index'),
-  //       meta: { title: '寝室公约', icon: 'form' }
-  //     }
-  //   ]
-  // },
+  {
+    path: '/contract',
+    redirect: '/contract',
+    component: Layout,
+    children: [
+      {
+        path: 'contract',
+        name: 'Contract',
+        component: () => import('@/views/contract/index'),
+        meta: { title: '寝室公约', icon: 'form' }
+      }
+    ]
+  },
   //
   // {
   //   path: '/nested',

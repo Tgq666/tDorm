@@ -5,11 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d46b90d-d10d-4a07-8df6-cc085560c2e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/annotation/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/controller/contract/ContractController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/entity/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/entity/SysLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/log/LogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/mapper/ContractMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/mapper/ContractMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/mapper/SysLogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/mapper/SysLogMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/service/contract/ContractService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/utils/HttpContextUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/utils/IPUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tdorm-web/src/layout/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tdorm-web/src/layout/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tdorm-web/src/layout/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../tdorm-web/src/layout/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tdorm-web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tdorm-web/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tdorm-web/src/views/contract/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../tdorm-web/src/views/contract/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tdorm-web/src/views/expense/paid/needPay/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../tdorm-web/src/views/expense/paid/needPay/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tdorm-web/src/views/login/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../tdorm-web/src/views/login/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tdorm-web/src/views/user/UserRegister.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../tdorm-web/src/views/user/UserRegister.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/config/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/config/threadpool/ExecutorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/config/threadpool/ExecutorConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/controller/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/controller/Hello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/controller/consume/ConsumeInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/controller/consume/ConsumeInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/controller/dorm/DormModifyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/controller/dorm/DormModifyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/controller/user/UserModifyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/controller/user/UserModifyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/entity/cons/ConstantUtil.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/service/consume/ConsumeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/service/consume/ConsumeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/service/redis/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/service/redis/RedisService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/utils/RespUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/utils/RespUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/tgq/tdorm/TdormApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tgq/tdorm/TdormApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/tdorm.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/config/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/config/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/controller/Hello.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/controller/Hello.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/controller/consume/ConsumeInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/controller/consume/ConsumeInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/controller/dorm/DormModifyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/controller/dorm/DormModifyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/controller/user/UserModifyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/controller/user/UserModifyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/entity/cons/ConstantUtil.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/service/consume/ConsumeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/service/consume/ConsumeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/service/redis/RedisService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/service/redis/RedisService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/utils/RespUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tgq/tdorm/utils/RespUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/tgq/tdorm/TdormApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tgq/tdorm/TdormApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +59,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -49,12 +87,15 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectId" id="1kpW9q9juUXSuCqL50sOGutRJO0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -62,45 +103,27 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tdorm-web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/tgq/tdorm/game/bird/pic" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.tgq.tdorm.utils" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\code\JavaProject\myfirst\tDorm\tdorm\src\main\java\com\tgq\tdorm\game\bird\pic" />
+      <recent name="C:\code\JavaProject\myfirst\tDorm\tdorm\src\main\java\com\tgq\tdorm\game\bird\flybird" />
+      <recent name="C:\code\JavaProject\myfirst\tDorm\tdorm\src\main\java\com\tgq\tdorm\game\bird" />
       <recent name="C:\code\JavaProject\tdorm\src\main\resources\mapper" />
       <recent name="C:\code\JavaProject\tdorm\src\main\resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tgq.tdorm.utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\code\JavaProject\myfirst\tDorm\tdorm\src\main\resources\static" />
+      <recent name="C:\code\JavaProject\myfirst\tDorm\tdorm\src\main\java\com\tgq\tdorm\game\bird\flybird" />
+      <recent name="C:\code\JavaProject\myfirst\tDorm\tdorm\src\main\java\com\tgq\tdorm\game\bird" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TdormApplication">
-    <configuration name="MD5Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tgq.tdorm.utils.MD5Util" />
-      <module name="tdorm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tgq.tdorm.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Son" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tgq.tdorm.service.user.Son" />
-      <module name="tdorm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tgq.tdorm.service.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TdormApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdorm" />
       <extension name="coverage">
@@ -139,11 +162,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.TdormApplicationTests" />
+      <item itemvalue="JUnit.TdormApplicationTests.contextLoads" />
+      <item itemvalue="Spring Boot.TdormApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TdormApplicationTests" />
-        <item itemvalue="Application.MD5Util" />
-        <item itemvalue="Application.Son" />
         <item itemvalue="JUnit.TdormApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
@@ -230,6 +256,24 @@
       <workItem from="1611567100128" duration="823000" />
       <workItem from="1611654327274" duration="862000" />
       <workItem from="1612530945037" duration="11966000" />
+      <workItem from="1612771607409" duration="1239000" />
+      <workItem from="1612803515836" duration="677000" />
+      <workItem from="1612860603842" duration="1177000" />
+      <workItem from="1613060734959" duration="7270000" />
+      <workItem from="1613107178857" duration="1632000" />
+      <workItem from="1613127379962" duration="1215000" />
+      <workItem from="1613130325416" duration="2110000" />
+      <workItem from="1613132451025" duration="8626000" />
+      <workItem from="1613194973897" duration="661000" />
+      <workItem from="1613282760521" duration="595000" />
+      <workItem from="1613380039733" duration="1254000" />
+      <workItem from="1613406044849" duration="183000" />
+      <workItem from="1613639414523" duration="9568000" />
+      <workItem from="1613754730175" duration="906000" />
+      <workItem from="1613799210662" duration="185000" />
+      <workItem from="1613831436098" duration="611000" />
+      <workItem from="1613890413982" duration="5525000" />
+      <workItem from="1613899079377" duration="1721000" />
     </task>
     <servers />
   </component>
@@ -245,86 +289,90 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1607000524001" />
-    <state x="223" y="68" width="1164" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608367031437">
+    <state x="223" y="68" width="1164" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613639540094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="68" width="1164" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1608367031437" />
-    <state x="494" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608368830278">
+    <state x="223" y="68" width="1164" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1613639540094" />
+    <state x="494" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613891513906">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="494" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1608368830278" />
-    <state x="574" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1612543454554">
+    <state x="494" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1613891513906" />
+    <state x="574" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1613891353251">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="97" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1612543454554" />
+    <state x="574" y="97" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1613891353251" />
+    <state x="378" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1613152247349">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="378" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1613152247349" />
     <state x="555" y="241" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1608274793548">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="555" y="241" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1536.824@0.0.1536.824" timestamp="1608274793548" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1611125256014">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613062329429">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1611125256014" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1613062329429" />
     <state x="499" y="159" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1607574468076">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.824@0.0.1536.824" timestamp="1607574468076" />
-    <state width="490" height="466" key="DebuggerActiveHint" timestamp="1612588172895">
+    <state width="490" height="466" key="DebuggerActiveHint" timestamp="1613668965195">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="490" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1612588172895" />
+    <state width="490" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1613668965195" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1612530950204">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1612530950204" />
-    <state width="1492" height="262" key="GridCell.Tab.0.bottom" timestamp="1612630894606">
+    <state width="1493" height="204" key="GridCell.Tab.0.bottom" timestamp="1613899058731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="262" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612630894606" />
-    <state width="1492" height="262" key="GridCell.Tab.0.center" timestamp="1612630894606">
+    <state width="1493" height="204" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613899058731" />
+    <state width="1493" height="204" key="GridCell.Tab.0.center" timestamp="1613899058731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="262" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612630894606" />
-    <state width="1492" height="262" key="GridCell.Tab.0.left" timestamp="1612630894606">
+    <state width="1493" height="204" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613899058731" />
+    <state width="1493" height="204" key="GridCell.Tab.0.left" timestamp="1613899058731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="262" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612630894606" />
-    <state width="1492" height="262" key="GridCell.Tab.0.right" timestamp="1612630894606">
+    <state width="1493" height="204" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613899058731" />
+    <state width="1493" height="204" key="GridCell.Tab.0.right" timestamp="1613899058731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="262" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612630894606" />
-    <state width="1492" height="262" key="GridCell.Tab.1.bottom" timestamp="1612630894607">
+    <state width="1493" height="204" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613899058731" />
+    <state width="1493" height="204" key="GridCell.Tab.1.bottom" timestamp="1613899058731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="262" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612630894607" />
-    <state width="1492" height="262" key="GridCell.Tab.1.center" timestamp="1612630894606">
+    <state width="1493" height="204" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613899058731" />
+    <state width="1493" height="204" key="GridCell.Tab.1.center" timestamp="1613899058731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="262" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1612630894606" />
-    <state width="1492" height="262" key="GridCell.Tab.1.left" timestamp="1612630894606">
+    <state width="1493" height="204" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1613899058731" />
+    <state width="1493" height="204" key="GridCell.Tab.1.left" timestamp="1613899058731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="262" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1612630894606" />
-    <state width="1492" height="262" key="GridCell.Tab.1.right" timestamp="1612630894606">
+    <state width="1493" height="204" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1613899058731" />
+    <state width="1493" height="204" key="GridCell.Tab.1.right" timestamp="1613899058731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="262" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1612630894606" />
-    <state width="1492" height="262" key="GridCell.Tab.2.bottom" timestamp="1612630894607">
+    <state width="1493" height="204" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1613899058731" />
+    <state width="1493" height="204" key="GridCell.Tab.2.bottom" timestamp="1613899058731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="262" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612630894607" />
-    <state width="1492" height="262" key="GridCell.Tab.2.center" timestamp="1612630894607">
+    <state width="1493" height="204" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613899058731" />
+    <state width="1493" height="204" key="GridCell.Tab.2.center" timestamp="1613899058731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="262" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1612630894607" />
-    <state width="1492" height="262" key="GridCell.Tab.2.left" timestamp="1612630894607">
+    <state width="1493" height="204" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1613899058731" />
+    <state width="1493" height="204" key="GridCell.Tab.2.left" timestamp="1613899058731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="262" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1612630894607" />
-    <state width="1492" height="262" key="GridCell.Tab.2.right" timestamp="1612630894607">
+    <state width="1493" height="204" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1613899058731" />
+    <state width="1493" height="204" key="GridCell.Tab.2.right" timestamp="1613899058731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="262" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1612630894607" />
+    <state width="1493" height="204" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1613899058731" />
     <state x="299" y="68" key="Maven.ArtifactSearchDialog" timestamp="1609313426100">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -337,10 +385,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="262" y="2" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1607504929959" />
-    <state x="447" y="145" width="782" height="600" key="find.popup" timestamp="1611121298639">
+    <state x="447" y="145" width="782" height="600" key="find.popup" timestamp="1613892079608">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="447" y="145" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1611121298639" />
+    <state x="447" y="145" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1613892079608" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1612588697632">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -354,5 +402,11 @@
         <watch expression="confirmList.get(0)" language="JAVA" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/tdorm$TdormApplication.ic" NAME="TdormApplication Coverage Results" MODIFIED="1613898900221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/tdorm$BirdGame.ic" NAME="BirdGame Coverage Results" MODIFIED="1613151505478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.tgq.tdorm.game.bird.flybird.*</FILTER>
+    </SUITE>
   </component>
 </project>

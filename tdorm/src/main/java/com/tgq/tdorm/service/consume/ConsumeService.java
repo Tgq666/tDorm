@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.*;
 
 /**
@@ -32,21 +31,23 @@ public class ConsumeService {
     public List<Consume> getUnSettledConsumeInfo(String dormNum) {
         return getConsumeInfoFromRedis(dormNum, false,0);
     }
+
     public List<Consume> getDeletedConsumeInfo(String dormNum) {
         return getConsumeInfoFromRedis(dormNum, false,1);
     }
 
     private List<Consume> getConsumeInfoFromRedis(String dormNum, boolean settled,Integer isDeleted) {
         User principal = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        String id = String.valueOf(principal.getId());
-        List<Consume> info = (List<Consume>) redisService.lGet(id).get(0);
+        String key = isDeleted == 1 ? "deleted" : settled ? "settled" : "unsettled" +principal.getId();
+        List<Consume> info = (List)redisService.lGet(key);
         //从redis中查询，如果redis挂了或者在redis中没有数据，则从数据库中查询
         if(info == null || info.size() == 0){
             info = getConsumeInfo(dormNum, settled, isDeleted);
-            System.out.println("从数据库中查询");
-            redisService.lSet(id,info);
+            if(info.size() > 0){
+                redisService.lSet(key,(List)info,60*60);
+            }
         }
-        return info;
+        return  info;
     }
 
     /**

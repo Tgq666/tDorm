@@ -39,3 +39,6 @@ spring:
   #redis
   redis:
     timeout: 5000
+  aop:
+    auto: true
+    proxy-target-class: true

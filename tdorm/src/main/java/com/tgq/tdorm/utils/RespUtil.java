@@ -18,20 +18,31 @@ public class RespUtil {
         this.data = data;
     }
 
-    public static RespUtil success(String msg){
-        return new RespUtil(RespCode.SUCCESS,msg,null);
+    public static RespUtil success() {
+        return new RespUtil(RespCode.SUCCESS, null, null);
     }
 
-    public static RespUtil success(String msg,Object data){
-        return new RespUtil(RespCode.SUCCESS,msg,data);
+    public static RespUtil success(String msg) {
+        return new RespUtil(RespCode.SUCCESS, msg, null);
+    }
+    public static RespUtil success(Object data) {
+        return new RespUtil(RespCode.SUCCESS, null, data);
     }
 
-    public static RespUtil error(String msg){
-        return new RespUtil(RespCode.SYSTEM_ERROR,msg,null);
+    public static RespUtil success(String msg, Object data) {
+        return new RespUtil(RespCode.SUCCESS, msg, data);
     }
 
-    public static RespUtil error(String msg,Object data){
-        return new RespUtil(RespCode.SYSTEM_ERROR,msg,data);
+    public static RespUtil error() {
+        return new RespUtil(RespCode.SYSTEM_ERROR, null, null);
+    }
+
+    public static RespUtil error(String msg) {
+        return new RespUtil(RespCode.SYSTEM_ERROR, msg, null);
+    }
+
+    public static RespUtil error(String msg, Object data) {
+        return new RespUtil(RespCode.SYSTEM_ERROR, msg, data);
     }
 
     public int getCode() {

@@ -95,20 +95,7 @@
     data() {
       return {
         visible: false,
-        gridData:[
-          {
-            name:"何豪",
-            price:100
-          },
-          {
-            name:"旭寒",
-            price:-100
-          },
-          {
-            name:"谭英琦",
-            price:90
-          }
-        ],
+        gridData:[],
         nameFilter:[],
         pay : 0,
         payText: "去支付",
@@ -119,14 +106,14 @@
     },
     created: function() {
       let param = new URLSearchParams()
-      param.append('dormNum', '10007')
+      let user = JSON.parse(localStorage.getItem('user'))
+      param.append('dormNum', user.dormNum)
       axios.get('/api/unSdConsumeInfo', { params: param }).then(resp => {
         this.loading = false
         if (resp.data.code === 200) {
           //填充表格数据
           this.tableData = resp.data.data
           //计算当前总账单
-          let user = JSON.parse(localStorage.getItem('user'))
           let username = user.name;
           let tempPay = 0;
           //计算和每个人的账单

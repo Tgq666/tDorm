@@ -1,5 +1,6 @@
 package com.tgq.tdorm.controller.dorm;
 
+import com.tgq.tdorm.annotation.Log;
 import com.tgq.tdorm.service.dorm.DormService;
 import com.tgq.tdorm.utils.RespUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ public class DormModifyController {
     @Autowired
     DormService dormService;
 
+    @Log("创建寝室")
     @PostMapping("/createDorm")
     public RespUtil createDorm(String dormName){
         int dormNum = dormService.createDormitory(dormName);

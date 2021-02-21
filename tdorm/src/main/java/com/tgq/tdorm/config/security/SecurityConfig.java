@@ -3,7 +3,6 @@ package com.tgq.tdorm.config.security;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tgq.tdorm.entity.User;
 import com.tgq.tdorm.entity.cons.ResponseMessage;
-import com.tgq.tdorm.entity.cons.ConstantUtil;
 import com.tgq.tdorm.utils.RespUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -19,15 +18,12 @@ import org.springframework.security.core.session.SessionRegistryImpl;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.security.web.authentication.rememberme.AbstractRememberMeServices;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.security.web.authentication.session.ConcurrentSessionControlAuthenticationStrategy;
 import org.springframework.security.web.session.ConcurrentSessionFilter;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import java.io.PrintWriter;
@@ -96,7 +92,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //取消对静态资源的拦截
         web.ignoring().antMatchers("/css/**", "/js/**", "/index.html", "/img/**", "/fonts/**", "/favicon.ico");
         //注册页面相关的不需要拦截
-        web.ignoring().antMatchers("/userExit", "/register", "/test", "/dormExit","/createDorm");
+        web.ignoring().antMatchers("/userExit", "/register", "/game", "/dormExit","/createDorm");
     }
 
     @Override
@@ -117,10 +113,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutSuccessHandler((req, resp, auth) -> {
                     resp.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
                     RespUtil success = RespUtil.success(ResponseMessage.LOGOUT_SUCCESS);
-                    Cookie cookie = new Cookie("tDormUser",null);
-                    cookie.setMaxAge(0); // expires in 7 days
-                    cookie.setDomain(ConstantUtil.DOMIN);
-                    resp.addCookie(cookie);
                     PrintWriter out = resp.getWriter();
                     out.write(new ObjectMapper().writeValueAsString(success));
                     out.flush();
